@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Test Page</title>
+    </head>
+    <body>
+        <div id="printMsg"></div>
+
+        <script id="response-template" type="text/x-handlebars-template">
+            <article class="post-container">
+                {%verbatim%}
+                {{#each .}}
+                    <h1>{{this.status}}</h1>
+                {{/each}}
+                {% endverbatim %}
+            </article>
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="{% static 'js/test.js' %}"></script>
+    </body>
+</html>

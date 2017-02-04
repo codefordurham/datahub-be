@@ -1,4 +1,5 @@
 import os
+import rest_framework
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -11,7 +12,7 @@ ALLOWED_HOSTS = []
 
 
 INSTALLED_APPS = [
-    'datahub_be_app.apps.DatahubBeAppConfig'
+    'datahub_be_app.apps.DatahubBeAppConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -67,7 +68,7 @@ WSGI_APPLICATION = 'datahub_be_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': '',
+        'NAME': 'datahub',
         'USER': '',
         'PASSWORD': '',
         'HOST': 'localhost',
