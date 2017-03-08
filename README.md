@@ -10,11 +10,23 @@ Planned endpoints (3-7-2017) are:
 
 Will respond with HEALTHY if the service and it's dependencies are up and running.  Will return UNHEALTHY if the service or any of it's dependencies are down.  Specific dependencies will be called out in the 
 
-**POST /project**
+**POST /projects**
 
 body: {"name":"ABC"}
 
 Create a project space for showing visualizations.  The first space is expected to be "Affordable Housing".
+
+**GET /projects**
+
+Responds with a list of all projects
+
+[{"id":1,"name":"ABC"},{"id":2,"name":"XYZ"}]
+
+**GET /projects/{projectId}**
+
+Responds with a specific project
+
+{"id":2,"name":"XYZ"}
 
 **Getting up and running:**
 
