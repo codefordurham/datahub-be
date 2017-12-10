@@ -28,19 +28,6 @@ $.ajaxSetup({
     }
 });
 
-
-function test_health(){
-    $.ajax({
-        url: '/api/health/',
-        type: 'GET',
-    }).done(function(results){
-        var source = $('#response-template').html()
-        var template = Handlebars.compile(source)
-        var html = template(results.results)
-        $('#printMsg').append(html)
-    })
-}
-
 function test_propsales(){
     $.ajax({
         url: '/api/propsales/',
@@ -53,4 +40,19 @@ function test_propsales(){
     })
 }
 
-test_health()
+test_propsales()
+
+function test_singfamhouse(){
+    $.ajax({
+        url: '/api/singfamhouse/',
+        type: 'GET',
+    }).done(function(results){
+        var source = $('#response-template').html()
+        var template = Handlebars.compile(source)
+        var html = template(results.results)
+        $('#printMsg').append(html)
+    })
+}
+
+test_singfamhouse()
+

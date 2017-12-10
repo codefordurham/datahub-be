@@ -4,21 +4,23 @@ from rest_framework.response import Response
 from rest_framework.settings import api_settings
 from rest_framework_csv.parsers import CSVParser
 from rest_framework_csv.renderers import CSVRenderer
-from .serializers import HealthSerializer, PropsalesSerializer
-from .models import Health, Propsales
+from .serializers import PropsalesSerializer, SingfamhouseSerializer
+from .models import Propsales, Singfamhouse
 
 
 def test_view(request):
     return render(request, 'test.html')
 
 
-class HealthView(viewsets.ModelViewSet):
-    queryset = Health.objects.all()
-    serializer_class = HealthSerializer
-    permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
-
 class PropsalesView(viewsets.ModelViewSet):
     queryset = Propsales.objects.all()
     parser_classes = (CSVParser,) + tuple(api_settings.DEFAULT_PARSER_CLASSES)
     renderer_classes = (CSVRenderer,) + tuple(api_settings.DEFAULT_RENDERER_CLASSES)
     serializer_class = PropsalesSerializer
+
+class SingfamhouseView(viewsets.ModelViewSet):
+    queryset = Singfamhouse.objects.all()
+    parser_classes = (CSVParser,) + tuple(api_settings.DEFAULT_PARSER_CLASSES)
+    renderer_classes = (CSVRenderer,) + tuple(api_settings.DEFAULT_RENDERER_CLASSES)
+    serializer_class = SingfamhouseSerializer
+
