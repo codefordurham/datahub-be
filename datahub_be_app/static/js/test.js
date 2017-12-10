@@ -40,4 +40,17 @@ function test_health(){
         $('#printMsg').append(html)
     })
 }
+
+function test_propsales(){
+    $.ajax({
+        url: '/api/propsales/',
+        type: 'GET',
+    }).done(function(results){
+        var source = $('#response-template').html()
+        var template = Handlebars.compile(source)
+        var html = template(results.results)
+        $('#printMsg').append(html)
+    })
+}
+
 test_health()

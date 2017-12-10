@@ -3,11 +3,9 @@ from django.contrib import admin
 from rest_framework import routers
 from datahub_be_app import views
 
-
-
 router = routers.DefaultRouter()
 router.register(r'health', views.HealthView)
-
+router.register(r'propsales', views.PropsalesView)
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
