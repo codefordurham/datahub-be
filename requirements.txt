@@ -1,11 +1,10 @@
 appdirs
 Django
 djangorestframework
-django-rest-framework-csv
+django-cors-headers
 markdown
 django-filter
 packaging
 psycopg2
 pyparsing
 six
-unicodecsv
