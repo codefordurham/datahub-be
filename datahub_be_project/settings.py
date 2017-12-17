@@ -1,5 +1,5 @@
 import os
-import rest_framework, rest_framework_csv
+import rest_framework
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
