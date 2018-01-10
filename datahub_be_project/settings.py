@@ -83,8 +83,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'datahub',
-        'USER': 'jmcmanus',
-        'PASSWORD': 'bulldurham',
+        'USER': '', # change to your ROLE in the psql DB
+        'PASSWORD': '', # change
         'HOST': '',
         'PORT': '',
     }

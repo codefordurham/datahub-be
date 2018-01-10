@@ -8,7 +8,7 @@ Planned endpoints (3-7-2017) are:
 
 **GET /health**
 
-Will respond with HEALTHY if the service and it's dependencies are up and running.  Will return UNHEALTHY if the service or any of it's dependencies are down.  Specific dependencies will be called out in the 
+Will respond with HEALTHY if the service and it's dependencies are up and running.  Will return UNHEALTHY if the service or any of it's dependencies are down.  Specific dependencies will be called out in the
 
 **POST /projects**
 
@@ -44,7 +44,8 @@ Responds with a specific project
     3. source env/bin/activate
     4. pip install -r requirements.txt
     5. python manage.py migrate
-    6. python manage.py runserver
+    6. (see below)
+    7. python manage.py runserver
 
 Currently datahub-be has two data sets, both part of the affordable housing project. To get the data for this project got to the Data Wrangling GitHub repository at:
 
@@ -52,5 +53,5 @@ https://github.com/codefordurham/datahub-dw/tree/master/durham_propbgs
 
 and follow the instructions. After you have created the data sets and finnished setting up datahub-be you can ingest the data by the following SQL commands in the postgresql database:
 
-\copy datahub_be_app_propsales FROM '/PATH/TO/DATASET/propsalescompass_100517.csv' DELIMITER ',' CSV;
-\copy datahub_be_app_singfamhouse FROM '/PATH/TO/DATASET/singfamhouse_100517.csv' DELIMITER ',' CSV;
+\copy datahub_be_app_propsales FROM '/FULL/PATH/TO/DATASET/propsalescompass_100517.csv' DELIMITER ',' CSV;
+\copy datahub_be_app_singfamhouse FROM '/FULL/PATH/TO/DATASET/singfamhouse_100517.csv' DELIMITER ',' CSV;
