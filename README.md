@@ -1,32 +1,4 @@
-# datahub-be
-Back End Service For Data Hub
----
-Overview
-The datahub-be is a REST service for managing curated data for visualizations.  It's expected to be partnered with datahub-fe, whcih will be the external web interface, but any front end could be used with this.
 
-Planned endpoints (3-7-2017) are:
-
-**GET /health**
-
-Will respond with HEALTHY if the service and it's dependencies are up and running.  Will return UNHEALTHY if the service or any of it's dependencies are down.  Specific dependencies will be called out in the 
-
-**POST /projects**
-
-body: {"name":"ABC"}
-
-Create a project space for showing visualizations.  The first space is expected to be "Affordable Housing".
-
-**GET /projects**
-
-Responds with a list of all projects
-
-[{"id":1,"name":"ABC"},{"id":2,"name":"XYZ"}]
-
-**GET /projects/{projectId}**
-
-Responds with a specific project
-
-{"id":2,"name":"XYZ"}
 
 **Getting up and running:**
 
