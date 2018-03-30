@@ -34,7 +34,7 @@ class DECRace_Bgs_00View(viewsets.ReadOnlyModelViewSet):
     queryset = DECRace_Bgs_00.objects.all()
     serializer_class = DECRace_Bgs_00Serializer
 
-class VCompassRace_Bgs_1314iew(viewsets.ReadOnlyModelViewSet):
+class CompassRace_Bgs_1314View(viewsets.ReadOnlyModelViewSet):
     queryset = CompassRace_Bgs_1314.objects.all()
     serializer_class = CompassRace_Bgs_1314Serializer
 
