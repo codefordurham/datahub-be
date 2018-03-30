@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import viewsets, permissions
-from .serializers import PropsalesSerializer, Propsales00Serializer, Propsales17Serializer, SingfamhouseSerializer, Singfamhouse00Serializer, Singfamhouse17Serializer
-from .models import Propsales, Propsales00, Propsales17, Singfamhouse, Singfamhouse00, Singfamhouse17
+from .serializers import PropsalesSerializer,Propsales00Serializer,Propsales17Serializer,SingfamhouseSerializer,Singfamhouse00Serializer,Singfamhouse17Serializer,DECRace_Bgs_00Serializer,CompassRace_Bgs_1314Serializer,ACSRace_Bgs_16Serializer
+from .models import Propsales,Propsales00,Propsales17,Singfamhouse,Singfamhouse00,Singfamhouse17,DECRace_Bgs_00,        CompassRace_Bgs_1314,ACSRace_Bgs_16
 
 def test_view(request):
     return render(request, 'test.html')
@@ -30,4 +30,15 @@ class Singfamhouse17View(viewsets.ReadOnlyModelViewSet):
     queryset = Singfamhouse17.objects.all()
     serializer_class = Singfamhouse17Serializer
 
+class DECRace_Bgs_00View(viewsets.ReadOnlyModelViewSet):
+    queryset = DECRace_Bgs_00.objects.all()
+    serializer_class = DECRace_Bgs_00Serializer
+
+class VCompassRace_Bgs_1314iew(viewsets.ReadOnlyModelViewSet):
+    queryset = CompassRace_Bgs_1314.objects.all()
+    serializer_class = CompassRace_Bgs_1314Serializer
+
+class ACSRace_Bgs_16View(viewsets.ReadOnlyModelViewSet):
+    queryset = ACSRace_Bgs_16.objects.all()
+    serializer_class = ACSRace_Bgs_16Serializer
 

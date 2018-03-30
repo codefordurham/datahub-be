@@ -10,7 +10,9 @@ router.register(r'propsales17', views.Propsales17View)
 router.register(r'singfamhouse', views.SingfamhouseView)
 router.register(r'singfamhouse00', views.Singfamhouse00View)
 router.register(r'singfamhouse17', views.Singfamhouse17View)
-
+router.register(r'decrace_bgs_00', views.DECRace_Bgs_00View)
+router.register(r'compassrace_bgs_1314', views.CompassRace_Bgs_1314View)
+router.register(r'acsrace_bgs_16', views.ACSRace_Bgs_16View)
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api/', include(router.urls)),
