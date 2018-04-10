@@ -13,6 +13,7 @@ router.register(r'singfamhouse17', views.Singfamhouse17View)
 router.register(r'decrace_bgs_00', views.DECRace_Bgs_00View)
 router.register(r'compassrace_bgs_1314', views.CompassRace_Bgs_1314View)
 router.register(r'acsrace_bgs_16', views.ACSRace_Bgs_16View)
+router.register(r'ltdbacs_trts_7016', views.LTDBACS_trts_7016View)
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api/', include(router.urls)),

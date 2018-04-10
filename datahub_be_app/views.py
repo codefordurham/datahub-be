@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import viewsets, permissions
-from .serializers import PropsalesSerializer,Propsales00Serializer,Propsales17Serializer,SingfamhouseSerializer,Singfamhouse00Serializer,Singfamhouse17Serializer,DECRace_Bgs_00Serializer,CompassRace_Bgs_1314Serializer,ACSRace_Bgs_16Serializer
-from .models import Propsales,Propsales00,Propsales17,Singfamhouse,Singfamhouse00,Singfamhouse17,DECRace_Bgs_00,        CompassRace_Bgs_1314,ACSRace_Bgs_16
+from .serializers import PropsalesSerializer,Propsales00Serializer,Propsales17Serializer,SingfamhouseSerializer,Singfamhouse00Serializer,Singfamhouse17Serializer,DECRace_Bgs_00Serializer,CompassRace_Bgs_1314Serializer,ACSRace_Bgs_16Serializer,LTDBACS_trts_7016Serializer
+from .models import Propsales,Propsales00,Propsales17,Singfamhouse,Singfamhouse00,Singfamhouse17,DECRace_Bgs_00,        CompassRace_Bgs_1314,ACSRace_Bgs_16,LTDBACS_trts_7016
 
 def test_view(request):
     return render(request, 'test.html')
@@ -42,3 +42,6 @@ class ACSRace_Bgs_16View(viewsets.ReadOnlyModelViewSet):
     queryset = ACSRace_Bgs_16.objects.all()
     serializer_class = ACSRace_Bgs_16Serializer
 
+class LTDBACS_trts_7016View(viewsets.ReadOnlyModelViewSet):
+    queryset = LTDBACS_trts_7016.objects.all()
+    serializer_class = LTDBACS_trts_7016Serializer
