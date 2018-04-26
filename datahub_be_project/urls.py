@@ -5,8 +5,8 @@ from datahub_be_app import views
 
 router = routers.DefaultRouter()
 router.register(r'ltdbacs_trts_7016', views.LTDBACS_trts_7016View)
-router.register(r'bgs00', views.bgs00View)
-router.register(r'bgs1317', views.bgs1317View)
+router.register(r'bgs9800', views.bgs9800View)
+router.register(r'bgs1318', views.bgs1318View)
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
