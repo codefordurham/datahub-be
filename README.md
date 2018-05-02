@@ -43,14 +43,15 @@ Responds with a specific project
     2. virtualenv env
     3. source env/bin/activate
     4. pip install -r requirements.txt
-    5. python manage.py migrate
-    6. python manage.py runserver
+    5. python manage.py makemigrations
+    6. python manage.py migrate
+    7. python manage.py runserver
 
-Currently datahub-be has two data sets, both part of the affordable housing project. To get the data for this project got to the Data Wrangling GitHub repository at:
+Currently datahub-be has three datasets, both part of the affordable housing project. To get the data 
+for this project got to the Data Wrangling GitHub repository at:
 
-https://github.com/codefordurham/datahub-dw/tree/master/durham_propbgs
+https://github.com/codefordurham/datahub-dw/tree/master/affordablehousing_data
 
-and follow the instructions. After you have created the data sets and finnished setting up datahub-be you can ingest the data by the following SQL commands in the postgresql database:
+and follow the instructions. You will need to run the datahub_ingest.bin file, which contains a series
+of psql command that ingest data into datahub-be.
 
-\copy datahub_be_app_propsales FROM '/PATH/TO/DATASET/propsalescompass_100517.csv' DELIMITER ',' CSV;
-\copy datahub_be_app_singfamhouse FROM '/PATH/TO/DATASET/singfamhouse_100517.csv' DELIMITER ',' CSV;
