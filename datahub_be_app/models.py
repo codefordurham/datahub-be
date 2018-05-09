@@ -236,6 +236,7 @@ class LTDBACS_trts_7016(models.Model):
    clf12 = models.DecimalField(max_digits=5,decimal_places=1,null=False)
    unemp12 = models.DecimalField(max_digits=4,decimal_places=1,null=False)
    punemp12 = models.DecimalField(max_digits=6,decimal_places=2,null=False)
+   pccol0012 = models.DecimalField(max_digits=6,decimal_places=2,null=False)
    pcnhwht0010 = models.DecimalField(max_digits=6,decimal_places=2,null=False)
    pcnhblk0010 = models.DecimalField(max_digits=6,decimal_places=2,null=False)
    pcasian0010 = models.DecimalField(max_digits=6,decimal_places=2,null=False)
@@ -368,6 +369,7 @@ class LTDBACS_trts_7016(models.Model):
    colf16 = models.DecimalField(max_digits=5,decimal_places=1,null=False)
    col16 = models.DecimalField(max_digits=5,decimal_places=1,null=False)
    pcol16 = models.DecimalField(max_digits=6,decimal_places=2,null=True)
+   pccol1216 = models.DecimalField(max_digits=6,decimal_places=2,null=True)
    pccol0016 = models.DecimalField(max_digits=6,decimal_places=2,null=True)
 
 class bgs9800(models.Model):
