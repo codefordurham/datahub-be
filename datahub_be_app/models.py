@@ -377,6 +377,16 @@ class LTDBACS_trts_7016(models.Model):
    pcol16 = models.DecimalField(max_digits=6,decimal_places=2,null=True)
    pccol1216 = models.DecimalField(max_digits=6,decimal_places=2,null=True)
    pccol0016 = models.DecimalField(max_digits=6,decimal_places=2,null=True)
+   grprchi12 = models.DecimalField(max_digits=5,decimal_places=2,null=True)
+   grprchi16 = models.DecimalField(max_digits=5,decimal_places=2,null=True)
+   pcgrprchi1216 = models.DecimalField(max_digits=5,decimal_places=2,null=True)
+   mmocphi12 = models.DecimalField(max_digits=5,decimal_places=2,null=True)
+   mmocphiym12 = models.DecimalField(max_digits=5,decimal_places=2,null=True)
+   mmocphinm12 = models.DecimalField(max_digits=5,decimal_places=2,null=True)
+   mmocphi16 = models.DecimalField(max_digits=5,decimal_places=2,null=True)
+   mmocphiym16 = models.DecimalField(max_digits=5,decimal_places=2,null=True)
+   mmocphinm16 = models.DecimalField(max_digits=5,decimal_places=2,null=True)
+   pcmmocphiym1216 = models.DecimalField(max_digits=4,decimal_places=2,null=True)
 
 class bgs9800(models.Model):
    id = models.TextField(12,primary_key=True)
