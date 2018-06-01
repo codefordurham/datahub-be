@@ -12,7 +12,6 @@ ALLOWED_HOSTS = []
 
 
 INSTALLED_APPS = [
-    'datahub_be_app.apps.DatahubBeAppConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -21,6 +20,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
     'rest_framework',
+    'datahub_be_app.apps.DatahubBeAppConfig',
 ]
 
 
