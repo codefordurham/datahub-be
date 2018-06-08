@@ -12,7 +12,6 @@ ALLOWED_HOSTS = []
 
 
 INSTALLED_APPS = [
-    'datahub_be_app.apps.DatahubBeAppConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -23,6 +22,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'rest_framework_gis'
+    'datahub_be_app.apps.DatahubBeAppConfig',
 ]
 
 
