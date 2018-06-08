@@ -19,8 +19,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.gis',
     'corsheaders',
     'rest_framework',
+    'rest_framework_gis'
 ]
 
 
@@ -81,7 +83,8 @@ WSGI_APPLICATION = 'datahub_be_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'NAME': 'datahub',
         'USER': 'jmcmanus',
         'PASSWORD': 'bulldurham',

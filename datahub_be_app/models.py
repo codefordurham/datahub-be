@@ -1,4 +1,5 @@
-from django.db import models
+from django.contrib.gis.db import models
+# from django.db import models
 
 class LTDBACS_trts_7016(models.Model):
    id = models.TextField(12,primary_key=True)
@@ -496,3 +497,21 @@ class bgs1318(models.Model):
    ptothnl16 = models.DecimalField(max_digits=5,decimal_places=2,null=False)
    pt2mnl16 = models.DecimalField(max_digits=5,decimal_places=2,null=False)
    ptlat16 = models.DecimalField(max_digits=6,decimal_places=2,null=False)
+
+class durhamhds(models.Model):
+    ogc_fid = models.IntegerField(primary_key=True)
+    wkb_geometry = models.MultiPolygonField()
+    name = models.CharField(max_length=100)
+    shape_area = models.DecimalField(max_digits=20, decimal_places=15)
+
+class muniboundaries(models.Model):
+    ogc_fid = models.IntegerField(primary_key=True)
+    wkb_geometry = models.MultiPolygonField()
+    towncode = models.CharField(max_length=5)
+    municipalb = models.CharField(max_length=100)
+
+class cntyboundaries(models.Model):
+    ogc_fid = models.IntegerField(primary_key=True)
+    wkb_geometry = models.MultiPolygonField()
+    fips = models.IntegerField()
+    name = models.CharField(max_length=100)

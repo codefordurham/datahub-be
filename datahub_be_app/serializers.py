@@ -1,5 +1,7 @@
 from rest_framework import serializers
-from .models import LTDBACS_trts_7016,bgs9800,bgs1318
+from rest_framework_gis.serializers import GeoFeatureModelSerializer
+
+from .models import LTDBACS_trts_7016,bgs9800,bgs1318, durhamhds, muniboundaries, cntyboundaries
 
 class LTDBACS_trts_7016Serializer (serializers.ModelSerializer):
     class Meta:
@@ -15,3 +17,24 @@ class bgs1318Serializer (serializers.ModelSerializer):
     class Meta:
         model = bgs1318
         fields = ('id','meansp1314','meansp1314a17','minsp1314','minsp1314a17','maxsp1314','maxsp1314a17','mediansp1314','mediansp1314a17','stddevsp1314','stddevsp1314a17','totsp1314','totsp1314a17','nums1314','mhi1314','mhi1314a17','pir1314','mean_sfno100517','tot_sfno100517','num_sfno100517','mean_sfoo100517','tot_sfoo100517','num_sfoo100517','prc_sfno100517','pop13','pop14','ptwhnl13','ptwhnl14','ptblknl13','ptblknl14','ptasnl13','ptasnl14','ptothnl13','ptothnl14','ptlat13','ptlat14','meansp1517','meansp1517a17','minsp1517','minsp1517a17','maxsp1517','maxsp1517a17','mediansp1517','mediansp1517a17','stddevsp1517','stddevsp1517a17','totsp1517','totsp1517a17','nums1517','mhi16','mhi16a17','pir1517','mgr_phi16','mmoc_phi16','mean_sfno011818','tot_sfno011818','num_sfno011818','mean_sfoo011818','tot_sfoo011818','num_sfoo011818','prc_sfno011818','pop16','ptwhnl16','ptblknl16','ptnanl16','ptasnl16','ptpanl16','ptothnl16','pt2mnl16','ptlat16')
+
+class durhamhdsSerializer(GeoFeatureModelSerializer):
+    class Meta:
+        model = durhamhds
+        geo_field = 'wkb_geometry' # Is that right?
+        id_field='ogc_fid'
+        fields= ('ogc_fid', 'name', 'shape_area')
+
+class muniboundariesSerializer(GeoFeatureModelSerializer):
+    class Meta:
+        model = muniboundaries
+        geo_field = 'wkb_geometry'
+        id_field='ogc_fid'
+        fields= ('ogc_fid', 'towncode', 'municipalb')
+
+class cntyboundariesSerializer(GeoFeatureModelSerializer):
+    class Meta:
+        model = cntyboundaries
+        geo_field = 'wkb_geometry'
+        id_field='ogc_fid'
+        fields= ('ogc_fid', 'name', 'fips')
