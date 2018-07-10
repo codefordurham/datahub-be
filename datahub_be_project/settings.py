@@ -21,7 +21,7 @@ INSTALLED_APPS = [
     'django.contrib.gis',
     'corsheaders',
     'rest_framework',
-    'rest_framework_gis'
+    'rest_framework_gis',
     'datahub_be_app.apps.DatahubBeAppConfig',
 ]
 
