@@ -86,8 +86,8 @@ DATABASES = {
         # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'NAME': 'datahub',
-        'USER': 'jmcmanus',
-        'PASSWORD': 'bulldurham',
+        'USER': '', # change to your ROLE in the psql DB if any
+        'PASSWORD': '', # change to your password if any
         'HOST': '',
         'PORT': '',
     }
