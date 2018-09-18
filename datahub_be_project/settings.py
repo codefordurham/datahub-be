@@ -12,15 +12,17 @@ ALLOWED_HOSTS = []
 
 
 INSTALLED_APPS = [
-    'datahub_be_app.apps.DatahubBeAppConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.gis',
     'corsheaders',
     'rest_framework',
+    'rest_framework_gis',
+    'datahub_be_app.apps.DatahubBeAppConfig',
 ]
 
 
@@ -81,7 +83,8 @@ WSGI_APPLICATION = 'datahub_be_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'NAME': 'datahub',
         'USER': '', # change to your ROLE in the psql DB if any
         'PASSWORD': '', # change to your password if any

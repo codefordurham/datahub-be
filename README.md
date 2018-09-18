@@ -50,10 +50,11 @@ Responds with a specific project
 
 Currently datahub-be has two data sets, both part of the affordable housing project. To get the data for this project clone or download the Data Wrangling GitHub repository at:
 
-https://github.com/codefordurham/datahub-dw/tree/master/durham_propbgs
+https://github.com/codefordurham/datahub-dw/tree/master/affordablehousing_data
 
 You can ingest the data by the following SQL commands in the postgresql database:
 
 #`\copy datahub_be_app_propsales FROM '/FULL/PATH/TO/DATASET/propsalescompass_100517.csv' DELIMITER ',' CSV;`
 
 #`\copy datahub_be_app_singfamhouse FROM '/FULL/PATH/TO/DATASET/singfamhouse_100517.csv' DELIMITER ',' CSV;`
+
