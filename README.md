@@ -39,14 +39,16 @@ Responds with a specific project
     3. create database: $`createdb datahub`
     4. enter db: $`psql datahub`
     5. create table: #`CREATE TABLE projects (id int, name text, mtime timestamp, ctime timestamp);`
-3. start up the service
+3. Ensure [GDAL](https://www.gdal.org/ "GDAL") is installed.
+4. start up the service
     1. $`cd ~/codefordurham/datahub-be`
-    2. $`virtualenv env`
-    3. $`source env/bin/activate`
-    4. $`pip install -r requirements.txt`
-    5. $`python manage.py migrate`
-    6. copy/ingest data (see below)
-    7. $`python manage.py runserver`
+    2. If you use [pipenv](https://github.com/pypa/pipenv "pipenv") - `pipenv install . -e`
+    3. $`virtualenv env`
+    4. $`source env/bin/activate`
+    5. $`pip install -r requirements.txt`
+    6. $`python manage.py migrate`
+    7. copy/ingest data (see below)
+    8. $`python manage.py runserver`
 
 Currently datahub-be has two data sets, both part of the affordable housing project. To get the data for this project clone or download the Data Wrangling GitHub repository at:
 
@@ -57,4 +59,3 @@ You can ingest the data by the following SQL commands in the postgresql database
 #`\copy datahub_be_app_propsales FROM '/FULL/PATH/TO/DATASET/propsalescompass_100517.csv' DELIMITER ',' CSV;`
 
 #`\copy datahub_be_app_singfamhouse FROM '/FULL/PATH/TO/DATASET/singfamhouse_100517.csv' DELIMITER ',' CSV;`
-
