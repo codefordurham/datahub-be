@@ -1,5 +1,7 @@
 .gitignore
 datahub_be_app/__pycache__/
+datahub_be_app/migrations/
+datahub_be_app/migrations/__init__.py
 datahub_be_app/migrations/0001_initial.py
 datahub_be_app/migrations/__pycache__/
 datahub_be_project/__pycache__/
